@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Warehousing</title>
+</head>
+<body>
+    
+    <main>
+        <section class="container">
+
+        
+            <section class="main-container">
+                <h3 class="form-header">
+                    Add New Item
+                </h3>
+
+                <div class="form-container">
+                    <form>
+                        <!-- action="#" method="post" id="users" autocomplete="on"action="#" method="post" id="users" autocomplete="on" -->
+                        <div class="item">
+                            <label for="item-name">Item Name</label>
+                            <input id="item_name" type="text" placeholder="Item name">                        
+                        </div>
+                        
+                        <div class="item">
+                            <label for="description">Description</label>
+                            <input id="description" class="descr" type="text" placeholder="Description">
+                        </div>
+
+                        <div class="item">
+                            <label for="price">Price</label>
+                            <input id="price" type="text" placeholder="Price">
+                        </div>
+
+                        <div class="item">
+                            <label for="quantity">Quantity</label>
+                            <input id="quantity" type="text" placeholder="Quantity">
+                        </div>
+
+                        <div class="select">
+                            <label for="select">Select Warehouse</label>
+                            <select name="" id="">
+                                <option value="first">First warehouse</option>
+                                <option value="second">Second warehouse</option>
+                                <option value="third">Third warehouse</option>
+                                <option value="fourth">Fourth warehouse</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">Add Item</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="second-container">
+                <h3 class="form-header">
+                    Add New Warehouse
+                </h3>
+
+                <div class="form-container">
+                    <form action="post">
+
+                        <div class="item">
+                            <label for="item-name">Item Name</label>
+                            <input id="item-name" type="text" placeholder="Item name">                        
+                        </div>
+                        
+                        <div class="item">
+                            <label for="description">Description</label>
+                            <input id="description" type="text" placeholder="Description">
+                        </div>
+
+                        <button type="submit">Add Warehouse</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+
+        <section class="table">
+            <table>
+                <tr>
+                    <th>SKU</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Warehouse</th>
+                    <th>Action</th>
+                  </tr>
+
+                  <tr>
+                    <td id="td1"></td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>Germany</td>
+                    <td>Germany</td>
+                    <td>Germany</td>
+                    <td><button type="submit">Edit</button></td>
+                    <td><button type="submit">Delete</button></td>
+                    
+                  </tr>
+            </table>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

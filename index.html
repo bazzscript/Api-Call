@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Warehousing</title>
 </head>
+
 <body>
-    
     <main>
         <section class="container">
-
-        
             <section class="main-container">
                 <h3 class="form-header">
                     Add New Item
@@ -23,35 +22,30 @@
                         <!-- action="#" method="post" id="users" autocomplete="on"action="#" method="post" id="users" autocomplete="on" -->
                         <div class="item">
                             <label for="item-name">Item Name</label>
-                            <input id="item_name" type="text" placeholder="Item name">                        
-                        </div>
-                        
-                        <div class="item">
-                            <label for="description">Description</label>
-                            <input id="description" class="descr" type="text" placeholder="Description">
+                            <input id="item-name" type="text" placeholder="Item Name">
                         </div>
 
                         <div class="item">
-                            <label for="price">Price</label>
-                            <input id="price" type="text" placeholder="Price">
+                            <label for="item-description">Item Description</label>
+                            <input id="item-description" type="text" placeholder="Item Description">
                         </div>
 
                         <div class="item">
-                            <label for="quantity">Quantity</label>
-                            <input id="quantity" type="text" placeholder="Quantity">
+                            <label for="item-price">Item Price</label>
+                            <input id="item-price" type="text" placeholder="Item Price">
                         </div>
 
-                        <div class="select">
-                            <label for="select">Select Warehouse</label>
-                            <select name="" id="">
-                                <option value="first">First warehouse</option>
-                                <option value="second">Second warehouse</option>
-                                <option value="third">Third warehouse</option>
-                                <option value="fourth">Fourth warehouse</option>
-                            </select>
+                        <div class="item">
+                            <label for="item-quantity">Item Quantity</label>
+                            <input id="item-quantity" type="text" placeholder="Item Quantity">
                         </div>
 
-                        <button type="submit">Add Item</button>
+                        <div class="select" id="warehouseDropdown">
+                            <label for="item-warehouse">Select Warehouse</label>
+                            <select name="" id="item-warehouse"></select>
+                        </div>
+
+                        <button type="button" id="addItemBtn">Add Item</button>
                     </form>
                 </div>
             </section>
@@ -65,16 +59,16 @@
                     <form action="post">
 
                         <div class="item">
-                            <label for="item-name">Item Name</label>
-                            <input id="item-name" type="text" placeholder="Item name">                        
-                        </div>
-                        
-                        <div class="item">
-                            <label for="description">Description</label>
-                            <input id="description" type="text" placeholder="Description">
+                            <label for="warehouse-name">Warehouse Name</label>
+                            <input id="warehouse-name" type="text" placeholder="Warehouse Name">
                         </div>
 
-                        <button type="submit">Add Warehouse</button>
+                        <div class="item">
+                            <label for="warehouse-address">Warehouse Address</label>
+                            <input id="warehouse-address" type="text" placeholder="Warehouse Address">
+                        </div>
+
+                        <button type="button" id="addWarehouseBtn">Add Warehouse</button>
                     </form>
                 </div>
             </section>
@@ -82,30 +76,51 @@
 
         <section class="table">
             <table>
-                <tr>
-                    <th>SKU</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th>Warehouse</th>
-                    <th>Action</th>
-                  </tr>
+                <thead>
+                    <h1>
+                        <th>INVENTORY ITEMS TABLE</th>
+                    </h1>
+                </thead>
+                <tbody id="item-table">
 
-                  <tr>
-                    <td id="td1"></td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                    <td>Germany</td>
-                    <td><button type="submit">Edit</button></td>
-                    <td><button type="submit">Delete</button></td>
-                    
-                  </tr>
+                </tbody>
             </table>
         </section>
+
+        <!-- the hidden section for updating an inventory -->
+        <section id="edit-section" class="edit-section">
+            <!-- <div class="form-container">
+                <form>
+                    <div class="item">
+                        <label for="itemName">Item Name</label>
+                        <input id="itemName" type="text" placeholder="Item Name">
+                    </div>
+
+                    <div class="item">
+                        <label for="itemDescription">Item Description</label>
+                        <input id="itemDescription" type="text" placeholder="Item Description">
+                    </div>
+                    <div class="item">
+                        <label for="itemQuantity">Item Quantity</label>
+                        <input id="itemQuantity" type="text" placeholder="Item Quantity">
+                    </div>
+                    <div class="item">
+                        <label for="itemPrice">Item Price</label>
+                        <input id="itemPrice" type="text" placeholder="Item Price">
+                    </div>
+                    <div class="item">
+                        <label for="itemWarehouse">Item Warehouse</label>
+                        <input id="itemWarehouse" type="text" placeholder="Item Warehouse">
+                    </div>
+
+                    <button type="button" id="saveItemBtn">Save</button>
+                </form>
+            </div> -->
+        </section>
     </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>

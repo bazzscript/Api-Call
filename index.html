@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Warehousing</title>
+    <title>Inventory Tracking App</title>
 </head>
 
 <body>
@@ -19,7 +19,6 @@
 
                 <div class="form-container">
                     <form>
-                        <!-- action="#" method="post" id="users" autocomplete="on"action="#" method="post" id="users" autocomplete="on" -->
                         <div class="item">
                             <label for="item-name">Item Name</label>
                             <input id="item-name" type="text" placeholder="Item Name">
@@ -40,35 +39,7 @@
                             <input id="item-quantity" type="text" placeholder="Item Quantity">
                         </div>
 
-                        <div class="select" id="warehouseDropdown">
-                            <label for="item-warehouse">Select Warehouse</label>
-                            <select name="" id="item-warehouse"></select>
-                        </div>
-
                         <button type="button" id="addItemBtn">Add Item</button>
-                    </form>
-                </div>
-            </section>
-
-            <section class="second-container">
-                <h3 class="form-header">
-                    Add New Warehouse
-                </h3>
-
-                <div class="form-container">
-                    <form action="post">
-
-                        <div class="item">
-                            <label for="warehouse-name">Warehouse Name</label>
-                            <input id="warehouse-name" type="text" placeholder="Warehouse Name">
-                        </div>
-
-                        <div class="item">
-                            <label for="warehouse-address">Warehouse Address</label>
-                            <input id="warehouse-address" type="text" placeholder="Warehouse Address">
-                        </div>
-
-                        <button type="button" id="addWarehouseBtn">Add Warehouse</button>
                     </form>
                 </div>
             </section>
@@ -87,40 +58,26 @@
             </table>
         </section>
 
+        <section class="table">
+            <table>
+                <thead>
+                    <h1>
+                        <th>DELETED INVENTORY ITEMS TABLE</th>
+                    </h1>
+                </thead>
+                <tbody id="deleted-item-table">
+
+                </tbody>
+            </table>
+        </section>
+
         <!-- the hidden section for updating an inventory -->
         <section id="edit-section" class="edit-section">
-            <!-- <div class="form-container">
-                <form>
-                    <div class="item">
-                        <label for="itemName">Item Name</label>
-                        <input id="itemName" type="text" placeholder="Item Name">
-                    </div>
-
-                    <div class="item">
-                        <label for="itemDescription">Item Description</label>
-                        <input id="itemDescription" type="text" placeholder="Item Description">
-                    </div>
-                    <div class="item">
-                        <label for="itemQuantity">Item Quantity</label>
-                        <input id="itemQuantity" type="text" placeholder="Item Quantity">
-                    </div>
-                    <div class="item">
-                        <label for="itemPrice">Item Price</label>
-                        <input id="itemPrice" type="text" placeholder="Item Price">
-                    </div>
-                    <div class="item">
-                        <label for="itemWarehouse">Item Warehouse</label>
-                        <input id="itemWarehouse" type="text" placeholder="Item Warehouse">
-                    </div>
-
-                    <button type="button" id="saveItemBtn">Save</button>
-                </form>
-            </div> -->
         </section>
     </main>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
